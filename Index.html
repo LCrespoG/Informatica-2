@@ -1,94 +1,78 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-
-    <!--Configuración general-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprador articulos | Universidad Alfonso X el Sabio</title>
+    <title>Comprador de Artículos | Universidad Alfonso X el Sabio</title>
 
-    <!--Metadatos general-->
-    <meta name="description" content="Pagina para comprar articulos de diferentes periodicos ">
-    <meta name="keywords" content="periodicos, articulos, comprar, articulos de diferentes periodicos">
+    <meta name="description" content="Página para comprar artículos de diferentes periódicos">
+    <meta name="keywords" content="periódicos, artículos, comprar, artículos de diferentes periódicos">
 
-    <!--Estilos y Fuentes-->
     <link rel="stylesheet" href="css/Index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
-    <section class="hero">
-        <div class="menu">
-            <button>Inicio</button>
-            <button>Articulos</button>
-            <button>Comparación</button>
-            <button>UAX</button>
-            <button>La Universidad</button>
+    <section class="hero" role="main" aria-labelledby="hero-title">
+        <div class="menu" role="navigation" aria-label="Menú principal">
+            <button type="button">Inicio</button>
+            <button type="button">Artículos</button>
+            <button type="button">Comparación</button>
+            <button type="button">UAX</button>
+            <button type="button">La Universidad</button>
         </div>
 
         <div class="contenido">
-
             <div class="cabecera">
-                <h1>Comprador de Articulos</h1>
+                <h1 id="hero-title">Comprador de Artículos</h1>
                 <p>Universidad Alfonso X el Sabio</p>
-                <img href="img/GTAV.png" alt="logo">
+                <img src="img/GTAV.png" alt="Logo de la Universidad Alfonso X el Sabio">
             </div>
 
-            <div class="articulos">
+            <div class="articulos" aria-labelledby="articulos-title">
+                <h2 id="articulos-title">Artículos destacados</h2>
 
-                <div class="articulo">
-                    <h2>Articulo1: Innovación tecnológica</h2>
+                <article class="articulo" aria-labelledby="articulo1-title">
+                    <h3 id="articulo1-title">Artículo 1: Innovación tecnológica</h3>
                     <p>La innovación tecnológica es el motor de la economía global. Desde la revolución industrial hasta
-                        la actual revolución digital, la tecnología ha transformado la forma en que vivimos y
-                        trabajamos.</p>
+                        la actual revolución digital, la tecnología ha transformado la forma en que vivimos y trabajamos.</p>
                     <ul>
                         <li>Ventaja: Actualización constante de las noticias</li>
-                        <li>Desventaja: filtro de calidad variable</li>
+                        <li>Desventaja: Filtro de calidad variable</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="articulo">
-                    <h2>Articulo 2: Impacto de la IA en la sociedad</h2>
+                <article class="articulo" aria-labelledby="articulo2-title">
+                    <h3 id="articulo2-title">Artículo 2: Impacto de la IA en la sociedad</h3>
                     <p>La IA ha transformado la forma en que nos comunicamos, trabajamos y nos informamos. Su impacto es
                         profundo y continuo, ya que se integra en nuestras vidas diarias de manera imperceptible.</p>
                     <ul>
-                        <li>Ventaja: Optimización de tareas repititivas</li>
+                        <li>Ventaja: Optimización de tareas repetitivas</li>
                         <li>Desventaja: Riesgos éticos a considerar</li>
                     </ul>
-                </div>
-
+                </article>
             </div>
 
-            <div class="comparacion">
-
-                <div class="cabecera">
-                    <h2>Resultados de la comparación</h2>
-                </div>
-
+            <div class="comparacion" aria-labelledby="comparacion-title">
+                <h2 id="comparacion-title">Resultados de la comparación</h2>
                 <div class="container-articulos">
-
-                    <div class="articulo">
-                        <p>Artículo A</p>
+                    <div class="articulo" role="region" aria-labelledby="articuloA-title">
+                        <h3 id="articuloA-title">Artículo A</h3>
                         <p>85%</p>
                     </div>
-
-                    <div class="articulo">
-                        <p>Artículo B</p>
+                    <div class="articulo" role="region" aria-labelledby="articuloB-title">
+                        <h3 id="articuloB-title">Artículo B</h3>
                         <p>78%</p>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section class="copyright">
+    <section class="copyright" role="contentinfo">
         <p>© 2025 Universidad Alfonso X el Sabio - <a href="https://www.uax.es">https://www.uax.es</a></p>
     </section>
 </body>
