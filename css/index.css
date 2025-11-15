@@ -1,0 +1,160 @@
+:root {
+    --fuente-principal: "Roboto", sans-serif;
+    --color-menu: #009688;       /* Turquesa para el menú */
+    --color-menu-hover: #00796B; /* Hover más oscuro */
+    --color-header: #ffffff;     /* Fondo cabecera */
+    --color-articulo: #ffffff;   /* Fondo artículos */
+    --color-comparacion: #009688;/* Fondo comparación */
+    --color-texto: #333333;
+}
+
+/* ================================
+   Estilos base
+   ================================ */
+body {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    background-color: #f0f8f8;
+    color: var(--color-texto);
+}
+
+/* ================================
+   Menú lateral
+   ================================ */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--color-menu);
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: var(--color-menu-hover);
+}
+
+/* ================================
+   Contenido principal
+   ================================ */
+.hero {
+    margin-left: 200px; /* Deja espacio para el menú fijo */
+    padding: 1rem 2rem;
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: var(--color-header);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.cabecera h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.cabecera img {
+    max-width: 80px;
+    height: auto;
+}
+
+/* ================================
+   Artículos
+   ================================ */
+.articulos {
+    margin-top: 1rem;
+}
+
+.articulo {
+    background-color: var(--color-articulo);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.articulo h3 {
+    margin-top: 0;
+    color: var(--color-menu);
+}
+
+/* ================================
+   Comparación
+   ================================ */
+.comparacion {
+    margin-top: 2rem;
+}
+
+.comparacion h2 {
+    background-color: var(--color-comparacion);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px 4px 0 0;
+}
+
+.container-articulos {
+    background-color: var(--color-comparacion);
+    padding: 1rem;
+    border-radius: 0 0 4px 4px;
+}
+
+.container-articulos .articulo {
+    background-color: #00796B;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ================================
+   Pie de página
+   ================================ */
+.copyright {
+    margin-left: 200px;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-menu);
+    color: #fff;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 768px) {
+    .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hero, .copyright {
+        margin-left: 0;
+    }
+}
