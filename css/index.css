@@ -30,6 +30,7 @@
   }
   
 
+<<<<<<< Updated upstream
 /*=============Editar aquí=============*/
 .container-principal{
     width: 100%;
@@ -39,4 +40,148 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+=======
+/* ================================
+   Menú lateral
+   ================================ */
+   /* Menú fijo a la izquierda, con botones en columna */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--color-menu);
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}/* Botones del menú: sin borde, texto blanco, ocupan todo el ancho */
+.menu button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: var(--color-menu-hover);
+}
+
+/* ================================
+   Contenido principal
+   ================================ */
+
+   /* Hero es el contenedor principal del contenido */
+.hero {
+    margin-left: 200px; /* Deja espacio para el menú fijo */
+    padding: 1rem 2rem;
+}
+
+/* Cabecera */
+.cabecera {
+    background-color: var(--color-header);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.cabecera h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.cabecera img {
+    max-width: 80px;
+    height: auto;
+}
+
+/* ================================
+   Artículos
+   ================================ */
+   /* Contenedor de artículos, los apila en columna con espacio entre ellos */
+.articulos {
+    margin-top: 1rem;
+}
+
+.articulo {
+    background-color: var(--color-articulo);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.articulo h3 {
+    margin-top: 0;
+    color: var(--color-menu);
+}
+
+/* ================================
+   Comparación
+   ================================ */
+.comparacion {
+    margin-top: 2rem;
+}
+
+.comparacion h2 {
+    background-color: var(--color-comparacion);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px 4px 0 0; /* Bordes redondeadosssss */
+}
+
+.container-articulos {
+    background-color: var(--color-comparacion);
+    padding: 1rem;
+    border-radius: 0 0 4px 4px;
+}
+/* Cada resultado es una caja verde oscuro con texto blanco y porcentaje alineado a la derecha */
+.container-articulos .articulo {
+    background-color: #00796B;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between; /* Nombre a la izquierda, porcentaje a la derecha */
+}
+
+/* ================================
+   Pie de página // Ocupa todo el ancho de la pantalla
+   ================================ */
+.copyright {
+    margin-left: 200px;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-menu);
+    color: #fff;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ================================
+   Responsive // En pantallas pequeñas, y el contenido ocupa todo el ancho. Se le ocurrió a chat jaja
+   ================================ */
+@media (max-width: 768px) {
+    .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hero, .copyright {
+        margin-left: 0;
+    }
+>>>>>>> Stashed changes
 }
