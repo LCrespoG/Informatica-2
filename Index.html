@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprador de Artículos | Universidad Alfonso X el Sabio</title>
 
-    <meta name="description" content="Página para comprar artículos de diferentes periódicos">
-    <meta name="keywords" content="periódicos, artículos, comprar, artículos de diferentes periódicos">
+
+    <meta name="description"
+        content="Página para comprar artículos de diferentes periódicos optimizada para accesibilidad.">
+    <meta name="keywords" content="periódicos, artículos, comprar, accesibilidad">
+
 
     <link rel="stylesheet" href="css/Index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,66 +18,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <section class="hero" role="main" aria-labelledby="hero-title">
-        <div class="menu" role="navigation" aria-label="Menú principal">
-            <button type="button">Inicio</button>
-            <button type="button">Artículos</button>
-            <button type="button">Comparación</button>
-            <button type="button">UAX</button>
-            <button type="button">La Universidad</button>
-        </div>
 
+<body>
+    <header role="banner">
+        <nav class="menu" role="navigation" aria-label="Menú principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulos-title">Artículos</a></li>
+                <li><a href="#comparacion-title">Comparación</a></li>
+                <li><a href="https://www.uax.es" target="_blank" rel="noopener">UAX</a></li>
+                <li><a href="#universidad">La Universidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="inicio" class="hero" aria-labelledby="hero-title">
         <div class="contenido">
             <div class="cabecera">
                 <h1 id="hero-title">Comprador de Artículos</h1>
                 <p>Universidad Alfonso X el Sabio</p>
-                <img src="img/GTAV.png" alt="Logo de la Universidad Alfonso X el Sabio">
+                <img src="img/GTAV.png" alt="Logo de la Universidad Alfonso X el Sabio" role="img">
             </div>
 
-            <div class="articulos" aria-labelledby="articulos-title">
+
+            <section class="articulos" aria-labelledby="articulos-title">
                 <h2 id="articulos-title">Artículos destacados</h2>
+
 
                 <article class="articulo" aria-labelledby="articulo1-title">
                     <h3 id="articulo1-title">Artículo 1: Innovación tecnológica</h3>
                     <p>La innovación tecnológica es el motor de la economía global. Desde la revolución industrial hasta
-                        la actual revolución digital, la tecnología ha transformado la forma en que vivimos y trabajamos.</p>
+                        la actual revolución digital, la tecnología ha transformado la forma en que vivimos y
+                        trabajamos.</p>
                     <ul>
                         <li>Ventaja: Actualización constante de las noticias</li>
                         <li>Desventaja: Filtro de calidad variable</li>
                     </ul>
                 </article>
 
+
                 <article class="articulo" aria-labelledby="articulo2-title">
                     <h3 id="articulo2-title">Artículo 2: Impacto de la IA en la sociedad</h3>
                     <p>La IA ha transformado la forma en que nos comunicamos, trabajamos y nos informamos. Su impacto es
-                        profundo y continuo, ya que se integra en nuestras vidas diarias de manera imperceptible.</p>
+                        profundo y continuo, integrándose de manera imperceptible en nuestras vidas.</p>
                     <ul>
                         <li>Ventaja: Optimización de tareas repetitivas</li>
                         <li>Desventaja: Riesgos éticos a considerar</li>
                     </ul>
                 </article>
-            </div>
+            </section>
 
-            <div class="comparacion" aria-labelledby="comparacion-title">
+
+            <section class="comparacion" aria-labelledby="comparacion-title">
                 <h2 id="comparacion-title">Resultados de la comparación</h2>
                 <div class="container-articulos">
+
+
                     <div class="articulo" role="region" aria-labelledby="articuloA-title">
                         <h3 id="articuloA-title">Artículo A</h3>
-                        <p>85%</p>
+                        <p aria-label="Puntuación del Artículo A">85%</p>
                     </div>
+
+
                     <div class="articulo" role="region" aria-labelledby="articuloB-title">
                         <h3 id="articuloB-title">Artículo B</h3>
-                        <p>78%</p>
+                        <p aria-label="Puntuación del Artículo B">78%</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </main>
 
-    <section class="copyright" role="contentinfo">
-        <p>© 2025 Universidad Alfonso X el Sabio - <a href="https://www.uax.es">https://www.uax.es</a></p>
-    </section>
+
+    <footer class="copyright" role="contentinfo">
+        <p>© 2025 Universidad Alfonso X el Sabio - <a href="https://www.uax.es" target="_blank" rel="noopener">Sitio
+                oficial de UAX</a></p>
+    </footer>
 </body>
 
 </html>
