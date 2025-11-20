@@ -1,4 +1,5 @@
 :root {
+<<<<<<< Updated upstream
     --fuente-principal: "Lalezar", sans-serif;
   }
   /*
@@ -7,6 +8,22 @@
   
   
   body {
+=======
+    --fuente-principal: "Roboto", sans-serif;
+    --color-menu: #009688;       
+    --color-menu-hover: #a6d9d3; 
+    --color-header: #ffffff;     
+    --color-articulo: #ffffff;   
+    --color-comparacion: #009688;
+    --color-texto: #333333;
+    --color-active: #a6c9ce;     
+}
+
+/* ================================
+   Estilos base
+   ================================ */
+body {
+>>>>>>> Stashed changes
     margin: 0;
     max-width: 100vw;
     overflow-x: hidden;
@@ -25,6 +42,7 @@
     font-family: var(--fuente-principal);
     font-optical-sizing: auto;
     font-weight: 300;
+<<<<<<< Updated upstream
     font-style: normal;
     font-variation-settings: "wdth" 100;
   }
@@ -41,6 +59,12 @@
     align-items: center;
     justify-content: center;
 =======
+=======
+    font-size: 12px; 
+}
+
+
+>>>>>>> Stashed changes
 /* ================================
    Menú lateral
    ================================ */
@@ -49,40 +73,69 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 180px; /*Más estrecho */
     height: 100vh;
     background-color: var(--color-menu);
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
     padding-top: 1rem;
 }/* Botones del menú: sin borde, texto blanco, ocupan todo el ancho */
+=======
+    align-items: flex-start;
+    padding-top: 0.8rem; /*  Menos espacio arriba */
+}
+
+>>>>>>> Stashed changes
 .menu button {
     background: none;
     border: none;
     color: #fff;
+<<<<<<< Updated upstream
     font-size: 1rem;
     text-align: left;
     padding: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+=======
+    font-size: 0.9rem; /* Texto más pequeño */
+    text-align: left;
+    padding: 0.6rem; /* Menos padding */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 140px; /* Botones más estrechos */
+    border-radius: 6px;
+>>>>>>> Stashed changes
 }
 
 .menu button:hover {
     background-color: var(--color-menu-hover);
 }
 
+<<<<<<< Updated upstream
 /* ================================
    Contenido principal
    ================================ */
 
    /* Hero es el contenedor principal del contenido */
+=======
+.menu button.active {
+    background-color: var(--color-active); /* Color clarito */
+    font-weight: 700;
+}
+
+/* ================================
+   Contenido principal
+   ================================ */
+>>>>>>> Stashed changes
 .hero {
-    margin-left: 200px; /* Deja espacio para el menú fijo */
-    padding: 1rem 2rem;
+    margin-left: 180px; /* Ajusta al nuevo ancho del menú */
+    padding: 0.5rem 1rem; /* Menos espacio */
 }
 
 /* Cabecera */
 .cabecera {
+<<<<<<< Updated upstream
     background-color: var(--color-header);
     padding: 1rem;
     display: flex;
@@ -93,45 +146,96 @@
 
 .cabecera h1 {
     font-size: 2rem;
+=======
+    background-color: #E0F7FA;
+    padding: 0.6rem 1rem; /* Reduce padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #009688; /* Línea más fina */
+}
+
+.cabecera h1 {
+    font-size: 1.4rem; /* Más pequeño */
+    margin: 0;
+    font-weight: 500;
+    color: #00796B;
+}
+
+.cabecera p {
+    font-size: 0.9rem;
+    color: #666;
+>>>>>>> Stashed changes
     margin: 0;
 }
 
 .cabecera img {
+<<<<<<< Updated upstream
     max-width: 80px;
     height: auto;
+=======
+    max-width: 70px; 
+    height: auto;
+    margin-left: 0.8rem;
+>>>>>>> Stashed changes
 }
 
 /* ================================
    Artículos
    ================================ */
+<<<<<<< Updated upstream
    /* Contenedor de artículos, los apila en columna con espacio entre ellos */
+=======
+>>>>>>> Stashed changes
 .articulos {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
 }
 
 .articulo {
     background-color: var(--color-articulo);
     border-radius: 6px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.8rem; 
+    margin-bottom: 0.8rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
 }
 
 .articulo h3 {
     margin-top: 0;
+<<<<<<< Updated upstream
     color: var(--color-menu);
 }
 
+=======
+    color: var(--color-comparacion);
+    font-weight: 700;
+    font-size: 1rem; 
+}
+
+.articulo ul {
+    margin: 0;
+    padding-left: 1rem; 
+    list-style-position: inside;
+}
+
+>>>>>>> Stashed changes
 /* ================================
    Comparación
    ================================ */
 .comparacion {
+<<<<<<< Updated upstream
     margin-top: 2rem;
+=======
+    margin-top: 1rem;
+    background-color: #00796B;
+    border-radius: 6px;
+    padding: 0.6rem; 
+>>>>>>> Stashed changes
 }
 
 .comparacion h2 {
     background-color: var(--color-comparacion);
     color: #fff;
+<<<<<<< Updated upstream
     padding: 0.5rem;
     border-radius: 4px 4px 0 0; /* Bordes redondeadosssss */
 }
@@ -152,21 +256,70 @@
     justify-content: space-between; /* Nombre a la izquierda, porcentaje a la derecha */
 }
 
+=======
+    font-weight: 500;
+    font-size: 1rem; 
+    display: block;
+    border-bottom: 2px solid #40a0ad;
+    width: 95%;
+    margin: 0 auto 0.6rem auto;
+    padding-bottom: 0.2rem;
+}
+
+.container-articulos {
+    background-color: #00796B;
+    border-radius: 6px;
+    padding: 0.6rem;
+}
+
+.container-articulos .articulo {
+    background-color: #009688;
+    color: #fff;
+    margin: 0.4rem 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.comparacion .articulo h3 {
+    color: #fff;
+    margin: 0;
+}
+
+.container-articulos .articulo p {
+    background-color: #40a0ad;
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-weight: 700;
+    min-width: 40px;
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+>>>>>>> Stashed changes
 /* ================================
-   Pie de página // Ocupa todo el ancho de la pantalla
+   Pie de página
    ================================ */
 .copyright {
-    margin-left: 200px;
+    margin-left: 180px;
     text-align: center;
-    padding: 1rem;
+    padding: 0.6rem; 
     background-color: var(--color-menu);
     color: #fff;
+    font-size: 0.8rem;
 }
 
 .copyright a {
     color: #fff;
     text-decoration: underline;
 }
+<<<<<<< Updated upstream
 
 /* ================================
    Responsive // En pantallas pequeñas, y el contenido ocupa todo el ancho. Se le ocurrió a chat jaja
@@ -185,3 +338,5 @@
     }
 >>>>>>> Stashed changes
 }
+=======
+>>>>>>> Stashed changes
