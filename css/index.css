@@ -49,7 +49,7 @@ body {
     background-color: var(--color-menu);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 🔑 Alinea los botones al margen izquierdo */
+    align-items: flex-start; /* Alinea los botones al margen izquierdo */
     padding-top: 1rem;
 }
 
@@ -59,11 +59,11 @@ body {
     border: none;
     color: #fff;
     font-size: 1rem;
-    text-align: left; /* 🔑 Texto alineado a la izquierda */
+    text-align: left; /* Texto alineado a la izquierda */
     padding: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 160px; /* 🔑 Tamaño fijo para todos */
+    width: 160px; /*Tamaño fijo para todos */
     border-radius: 6px; /* Opcional para hover */
 }
 
@@ -74,9 +74,10 @@ body {
 
 /* Botón activo */
 .menu button.active {
-    background-color: #00ACC1;
+    background-color: #b2ebf2; 
     font-weight: 700;
 }
+
 
 
 
@@ -144,13 +145,9 @@ body {
 
 /* Lista sin puntos */
 .articulo ul {
-    padding-left: 1rem;              
-    margin: 0;                       
-    list-style-position: inside;     
-}
-.articulo ul {
-    padding-left: 0;
-    list-style-position: inside;
+    margin: 0;
+    padding-left: 1rem;               /* Ajusta para que el texto quede alineado */
+    list-style-position: outside;     /* Guion fuera, texto alineado */
 }
 
 
