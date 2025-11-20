@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     --fuente-principal: "Lalezar", sans-serif;
   }
@@ -47,8 +48,34 @@ body {
     font-variation-settings: "wdth" 100;
   }
   
+=======
+    --fuente-principal: "Roboto", sans-serif;
+    --color-menu: #009688;       /* Turquesa para el menú */
+    --color-menu-hover: #00796B; /* Hover más oscuro */
+    --color-header: #ffffff;     /* Fondo cabecera */
+    --color-articulo: #ffffff;   /* Fondo artículos */
+    --color-comparacion: #009688;/* Fondo comparación */
+    --color-texto: #333333;
+    --color-active: #6cabb3;     /* Color auxiliar para hover */
+}
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 
-<<<<<<< Updated upstream
+/* ================================
+   Estilos base
+   ================================ */
+body {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    background-color: #E0F7FA;
+    color: var(--color-texto);
+    font-weight: 300;
+}
+
+
+
+/* ================================
+   Menú lateral
+   ================================ */
 /*=============Editar aquí=============*/
 .container-principal{
     width: 100%;
@@ -58,6 +85,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
 =======
 =======
     font-size: 12px; 
@@ -69,6 +97,8 @@ body {
    Menú lateral
    ================================ */
    /* Menú fijo a la izquierda, con botones en columna */
+=======
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 .menu {
     position: fixed;
     top: 0;
@@ -78,6 +108,7 @@ body {
     background-color: var(--color-menu);
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     padding-top: 1rem;
 }/* Botones del menú: sin borde, texto blanco, ocupan todo el ancho */
@@ -87,16 +118,39 @@ body {
 }
 
 >>>>>>> Stashed changes
+=======
+    align-items: flex-start;
+    padding-top: 1rem;
+}
+
+/* Botones del menú */
+/* Contenedor del menú */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--color-menu);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los botones al margen izquierdo */
+    padding-top: 1rem;
+}
+
+/* Botones del menú */
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 .menu button {
     background: none;
     border: none;
     color: #fff;
 <<<<<<< Updated upstream
     font-size: 1rem;
-    text-align: left;
+    text-align: left; /* Texto alineado a la izquierda */
     padding: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+<<<<<<< HEAD
 =======
     font-size: 0.9rem; /* Texto más pequeño */
     text-align: left;
@@ -106,17 +160,34 @@ body {
     width: 140px; /* Botones más estrechos */
     border-radius: 6px;
 >>>>>>> Stashed changes
+=======
+    width: 160px; /*Tamaño fijo para todos */
+    border-radius: 6px; /* Opcional para hover */
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 }
 
+/* Hover */
 .menu button:hover {
     background-color: var(--color-menu-hover);
 }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+/* Botón activo */
+.menu button.active {
+    background-color: #b2ebf2; 
+    font-weight: 700;
+}
+
+
+
+
+
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 /* ================================
    Contenido principal
    ================================ */
-
    /* Hero es el contenedor principal del contenido */
 =======
 .menu button.active {
@@ -133,18 +204,25 @@ body {
     padding: 0.5rem 1rem; /* Menos espacio */
 }
 
+
 /* Cabecera */
 .cabecera {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     background-color: var(--color-header);
     padding: 1rem;
+=======
+    background-color: #E0F7FA; /* Fondo celeste claro */
+    padding: 1rem 2rem;
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 3px solid #009688; /* Línea inferior turquesa */
 }
 
 .cabecera h1 {
+<<<<<<< HEAD
     font-size: 2rem;
 =======
     background-color: #E0F7FA;
@@ -166,10 +244,22 @@ body {
     font-size: 0.9rem;
     color: #666;
 >>>>>>> Stashed changes
+=======
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 500;
+    color: #00796B; /* Turquesa oscuro */
+}
+
+.cabecera p {
+    font-size: 1rem;
+    color: #666; /* Gris claro */
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
     margin: 0;
 }
 
 .cabecera img {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     max-width: 80px;
     height: auto;
@@ -178,15 +268,24 @@ body {
     height: auto;
     margin-left: 0.8rem;
 >>>>>>> Stashed changes
+=======
+    max-width: 90px;
+    height: auto;
+    margin-left: 1rem;
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 }
 
 /* ================================
    Artículos
    ================================ */
+<<<<<<< HEAD
 <<<<<<< Updated upstream
    /* Contenedor de artículos, los apila en columna con espacio entre ellos */
 =======
 >>>>>>> Stashed changes
+=======
+/* Contenedor de artículos, los apila en columna con espacio entre ellos */
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 .articulos {
     margin-top: 0.8rem;
 }
@@ -201,6 +300,7 @@ body {
 
 .articulo h3 {
     margin-top: 0;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     color: var(--color-menu);
 }
@@ -230,32 +330,70 @@ body {
     border-radius: 6px;
     padding: 0.6rem; 
 >>>>>>> Stashed changes
+=======
+    color: var(--color-comparacion);
+    font-weight: 700;
 }
 
+/* Lista sin puntos */
+.articulo ul {
+    margin: 0;
+    padding-left: 1rem;               /* Ajusta para que el texto quede alineado */
+    list-style-position: outside;     /* Guion fuera, texto alineado */
+}
+
+
+
+/* ================================
+   Comparación
+   ================================ */
+   .comparacion {
+    margin-top: 2rem;
+    background-color: #00796B; /* Fondo general */
+    border-radius: 6px;
+    padding: 0.8rem;
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
+}
+
+/* Título con línea más larga */
 .comparacion h2 {
-    background-color: var(--color-comparacion);
     color: #fff;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     padding: 0.5rem;
     border-radius: 4px 4px 0 0; /* Bordes redondeadosssss */
+=======
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: block; 
+    border-bottom: 2px solid #40a0ad; /* Línea turquesa clara */
+    width: 95%; /* Más larga, pero con margen */
+    margin: 0 auto 0.8rem auto; /* Centrada */
+    padding-bottom: 0.3rem;
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 }
 
+/* Caja contenedora */
 .container-articulos {
-    background-color: var(--color-comparacion);
+    background-color: #00796B; 
+    border-radius: 6px;
     padding: 1rem;
-    border-radius: 0 0 4px 4px;
 }
-/* Cada resultado es una caja verde oscuro con texto blanco y porcentaje alineado a la derecha */
+
+/* Cada fila */
 .container-articulos .articulo {
-    background-color: #00796B;
+    background-color: #009688; 
     color: #fff;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
+    margin: 0.5rem 0;
     border-radius: 4px;
     display: flex;
-    justify-content: space-between; /* Nombre a la izquierda, porcentaje a la derecha */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
 }
 
+<<<<<<< HEAD
 =======
     font-weight: 500;
     font-size: 1rem; 
@@ -285,11 +423,15 @@ body {
     font-size: 0.9rem;
 }
 
+=======
+/* Texto del título dentro de cada fila */
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 .comparacion .articulo h3 {
     color: #fff;
     margin: 0;
 }
 
+<<<<<<< HEAD
 .container-articulos .articulo p {
     background-color: #40a0ad;
     color: #fff;
@@ -303,6 +445,21 @@ body {
 }
 
 >>>>>>> Stashed changes
+=======
+/* Porcentajes en óvalos con color más claro */
+.container-articulos .articulo p {
+    background-color: #40a0ad; /* Color más claro para el óvalo */
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px; /* Forma ovalada */
+    font-weight: 700;
+    min-width: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
 /* ================================
    Pie de página
    ================================ */
@@ -322,7 +479,7 @@ body {
 <<<<<<< Updated upstream
 
 /* ================================
-   Responsive // En pantallas pequeñas, y el contenido ocupa todo el ancho. Se le ocurrió a chat jaja
+   Responsive // El contenido ocupa todo el ancho. Se le ocurrió a chat 
    ================================ */
 @media (max-width: 768px) {
     .menu {
@@ -336,7 +493,11 @@ body {
     .hero, .copyright {
         margin-left: 0;
     }
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 }
 =======
 >>>>>>> Stashed changes
+=======
+}
+>>>>>>> 51eb83a88248f7880bd2ea18c1a4ce048f4ec159
