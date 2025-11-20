@@ -6,7 +6,7 @@
     --color-articulo: #ffffff;   /* Fondo artículos */
     --color-comparacion: #009688;/* Fondo comparación */
     --color-texto: #333333;
-    --color-active: #6cabb3;
+    --color-active: #6cabb3;     /* Color auxiliar para hover */
 }
 
 /* ================================
@@ -17,12 +17,10 @@ body {
     font-family: var(--fuente-principal);
     background-color: #E0F7FA;
     color: var(--color-texto);
+    font-weight: 300;
 }
 
-body h1, h2, h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300; /* Roboto Light */
-}
+
 
 /* ================================
    Menú lateral
@@ -36,7 +34,22 @@ body h1, h2, h3{
     background-color: var(--color-menu);
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
+    padding-top: 1rem;
+}
+
+/* Botones del menú */
+/* Contenedor del menú */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--color-menu);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 🔑 Alinea los botones al margen izquierdo */
     padding-top: 1rem;
 }
 
@@ -46,24 +59,26 @@ body h1, h2, h3{
     border: none;
     color: #fff;
     font-size: 1rem;
-    text-align: left;
+    text-align: left; /* 🔑 Texto alineado a la izquierda */
     padding: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 160px; 
-    border-radius: 6px; 
+    width: 160px; /* 🔑 Tamaño fijo para todos */
+    border-radius: 6px; /* Opcional para hover */
 }
 
-/* Hover, cuando el cursor pasa por encima del botón */
+/* Hover */
 .menu button:hover {
-    background-color: var(--color-active);
+    background-color: var(--color-menu-hover);
 }
 
-/* Botón activo con color de fondo y texto en negrita */
+/* Botón activo */
 .menu button.active {
-    background-color: #7dd7e3;
+    background-color: #00ACC1;
     font-weight: 700;
 }
+
+
 
 
 /* ================================
@@ -78,24 +93,24 @@ body h1, h2, h3{
 
 /* Cabecera */
 .cabecera {
-    background-color: #E0F7FA; 
+    background-color: #E0F7FA; /* Fondo celeste claro */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #009688; 
+    border-bottom: 3px solid #009688; /* Línea inferior turquesa */
 }
 
 .cabecera h1 {
     font-size: 1.8rem;
     margin: 0;
     font-weight: 500;
-    color: #00796B;
+    color: #00796B; /* Turquesa oscuro */
 }
 
 .cabecera p {
     font-size: 1rem;
-    color: #666; 
+    color: #666; /* Gris claro */
     margin: 0;
 }
 
@@ -108,6 +123,7 @@ body h1, h2, h3{
 /* ================================
    Artículos
    ================================ */
+/* Contenedor de artículos, los apila en columna con espacio entre ellos */
 .articulos {
     margin-top: 1rem;
 }
@@ -123,14 +139,18 @@ body h1, h2, h3{
 .articulo h3 {
     margin-top: 0;
     color: var(--color-comparacion);
-    font-weight: 700; 
+    font-weight: 700;
 }
 
 /* Lista sin puntos */
 .articulo ul {
-    padding-left: 1rem; /* Ajusta el espacio a la izquierda */
-    margin: 0;          /* Elimina margen extra */
-    list-style-position: inside; /*Hace que el guion esté alineado con el texto dentro de la lista*/
+    padding-left: 1rem;              
+    margin: 0;                       
+    list-style-position: inside;     
+}
+.articulo ul {
+    padding-left: 0;
+    list-style-position: inside;
 }
 
 
@@ -150,23 +170,23 @@ body h1, h2, h3{
     color: #fff;
     font-weight: 500;
     font-size: 1.2rem;
-    display: block; /* Ocupa todo el ancho */
+    display: block; 
     border-bottom: 2px solid #40a0ad; /* Línea turquesa clara */
-    width: 95%; /* Más larga, pero con espacio para el margen */
-    margin: 0 auto 0.8rem auto; /* Centrada horizontalmente */
+    width: 95%; /* Más larga, pero con margen */
+    margin: 0 auto 0.8rem auto; /* Centrada */
     padding-bottom: 0.3rem;
 }
 
 /* Caja contenedora */
 .container-articulos {
-    background-color: #00796B; /* Fondo oscuro */
+    background-color: #00796B; 
     border-radius: 6px;
     padding: 1rem;
 }
 
 /* Cada fila */
 .container-articulos .articulo {
-    background-color: #009688; /* Turquesa más claro */
+    background-color: #009688; 
     color: #fff;
     margin: 0.5rem 0;
     border-radius: 4px;
@@ -197,7 +217,7 @@ body h1, h2, h3{
 
 
 /* ================================
-   Pie de página
+   Pie de página // Ocupa todo el ancho de la pantalla
    ================================ */
 .copyright {
     margin-left: 200px;
@@ -213,7 +233,7 @@ body h1, h2, h3{
 }
 
 /* ================================
-   Responsive
+   Responsive // El contenido ocupa todo el ancho. Se le ocurrió a chat 
    ================================ */
 @media (max-width: 768px) {
     .menu {
