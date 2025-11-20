@@ -6,6 +6,7 @@
     --color-articulo: #ffffff;   /* Fondo artículos */
     --color-comparacion: #009688;/* Fondo comparación */
     --color-texto: #333333;
+    --color-active: #6cabb3;
 }
 
 /* ================================
@@ -14,8 +15,13 @@
 body {
     margin: 0;
     font-family: var(--fuente-principal);
-    background-color: #f0f8f8;
+    background-color: #E0F7FA;
     color: var(--color-texto);
+}
+
+body h1, h2, h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Roboto Light */
 }
 
 /* ================================
@@ -30,9 +36,11 @@ body {
     background-color: var(--color-menu);
     display: flex;
     flex-direction: column;
+    align-items: flex-start; 
     padding-top: 1rem;
 }
 
+/* Botones del menú */
 .menu button {
     background: none;
     border: none;
@@ -42,38 +50,59 @@ body {
     padding: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+    width: 160px; 
+    border-radius: 6px; 
 }
 
+/* Hover, cuando el cursor pasa por encima del botón */
 .menu button:hover {
-    background-color: var(--color-menu-hover);
+    background-color: var(--color-active);
 }
+
+/* Botón activo con color de fondo y texto en negrita */
+.menu button.active {
+    background-color: #7dd7e3;
+    font-weight: 700;
+}
+
 
 /* ================================
    Contenido principal
    ================================ */
+   /* Hero es el contenedor principal del contenido */
 .hero {
     margin-left: 200px; /* Deja espacio para el menú fijo */
     padding: 1rem 2rem;
 }
 
+
 /* Cabecera */
 .cabecera {
-    background-color: var(--color-header);
-    padding: 1rem;
+    background-color: #E0F7FA; 
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 3px solid #009688; 
 }
 
 .cabecera h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 500;
+    color: #00796B;
+}
+
+.cabecera p {
+    font-size: 1rem;
+    color: #666; 
     margin: 0;
 }
 
 .cabecera img {
-    max-width: 80px;
+    max-width: 90px;
     height: auto;
+    margin-left: 1rem;
 }
 
 /* ================================
@@ -93,38 +122,79 @@ body {
 
 .articulo h3 {
     margin-top: 0;
-    color: var(--color-menu);
+    color: var(--color-comparacion);
+    font-weight: 700; 
 }
+
+/* Lista sin puntos */
+.articulo ul {
+    padding-left: 1rem; /* Ajusta el espacio a la izquierda */
+    margin: 0;          /* Elimina margen extra */
+    list-style-position: inside; /*Hace que el guion esté alineado con el texto dentro de la lista*/
+}
+
+
 
 /* ================================
    Comparación
    ================================ */
-.comparacion {
+   .comparacion {
     margin-top: 2rem;
+    background-color: #00796B; /* Fondo general */
+    border-radius: 6px;
+    padding: 0.8rem;
 }
 
+/* Título con línea más larga */
 .comparacion h2 {
-    background-color: var(--color-comparacion);
     color: #fff;
-    padding: 0.5rem;
-    border-radius: 4px 4px 0 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: block; /* Ocupa todo el ancho */
+    border-bottom: 2px solid #40a0ad; /* Línea turquesa clara */
+    width: 95%; /* Más larga, pero con espacio para el margen */
+    margin: 0 auto 0.8rem auto; /* Centrada horizontalmente */
+    padding-bottom: 0.3rem;
 }
 
+/* Caja contenedora */
 .container-articulos {
-    background-color: var(--color-comparacion);
+    background-color: #00796B; /* Fondo oscuro */
+    border-radius: 6px;
     padding: 1rem;
-    border-radius: 0 0 4px 4px;
 }
 
+/* Cada fila */
 .container-articulos .articulo {
-    background-color: #00796B;
+    background-color: #009688; /* Turquesa más claro */
     color: #fff;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
+    margin: 0.5rem 0;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
 }
+
+/* Texto del título dentro de cada fila */
+.comparacion .articulo h3 {
+    color: #fff;
+    margin: 0;
+}
+
+/* Porcentajes en óvalos con color más claro */
+.container-articulos .articulo p {
+    background-color: #40a0ad; /* Color más claro para el óvalo */
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px; /* Forma ovalada */
+    font-weight: 700;
+    min-width: 50px;
+    text-align: center;
+    margin: 0;
+}
+
 
 /* ================================
    Pie de página
