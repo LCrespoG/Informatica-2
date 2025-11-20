@@ -1,4 +1,5 @@
 :root {
+<<<<<<< Updated upstream
     --fuente-principal: "Lalezar", sans-serif;
   }
   /*
@@ -7,6 +8,22 @@
   
   
   body {
+=======
+    --fuente-principal: "Roboto", sans-serif;
+    --color-menu: #009688;       /* Turquesa para el menú */
+    --color-menu-hover: #00796B; /* Hover más oscuro */
+    --color-header: #ffffff;     /* Fondo cabecera */
+    --color-articulo: #ffffff;   /* Fondo artículos */
+    --color-comparacion: #009688;/* Fondo comparación */
+    --color-texto: #333333;
+    --color-active: #6cabb3;     /* Color auxiliar para hover */
+}
+
+/* ================================
+   Estilos base
+   ================================ */
+body {
+>>>>>>> Stashed changes
     margin: 0;
     max-width: 100vw;
     overflow-x: hidden;
@@ -30,6 +47,7 @@
   }
   
 
+<<<<<<< Updated upstream
 /*=============Editar aquí=============*/
 .container-principal{
     width: 100%;
@@ -39,4 +57,216 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+=======
+body h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Roboto Light */
+}
+
+/* ================================
+   Menú lateral
+   ================================ */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--color-menu);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+}
+
+/* Botones del menú */
+.menu button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 160px;
+    border-radius: 6px;
+}
+
+/* Hover, cuando el cursor pasa por encima del botón */
+.menu button:hover {
+    background-color: var(--color-active);
+}
+
+/* Botón activo con color de fondo y texto en negrita */
+.menu button.active {
+    background-color: #7dd7e3;
+    font-weight: 700;
+}
+
+
+
+/* ================================
+   Contenido principal
+   ================================ */
+   /* Hero es el contenedor principal del contenido */
+.hero {
+    margin-left: 200px; /* Deja espacio para el menú fijo */
+    padding: 1rem 2rem;
+}
+
+
+/* Cabecera */
+.cabecera {
+    background-color: #E0F7FA; /* Fondo celeste claro */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #009688; /* Línea inferior turquesa */
+}
+
+.cabecera h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 500;
+    color: #00796B; /* Turquesa oscuro */
+}
+
+.cabecera p {
+    font-size: 1rem;
+    color: #666; /* Gris claro */
+    margin: 0;
+}
+
+.cabecera img {
+    max-width: 90px;
+    height: auto;
+    margin-left: 1rem;
+}
+
+/* ================================
+   Artículos
+   ================================ */
+/* Contenedor de artículos, los apila en columna con espacio entre ellos */
+.articulos {
+    margin-top: 1rem;
+}
+
+.articulo {
+    background-color: var(--color-articulo);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.articulo h3 {
+    margin-top: 0;
+    color: var(--color-comparacion);
+    font-weight: 700;
+}
+
+/* Lista sin puntos */
+.articulo ul {
+    padding-left: 1rem;              
+    margin: 0;                       
+    list-style-position: inside;     
+}
+
+
+
+/* ================================
+   Comparación
+   ================================ */
+   .comparacion {
+    margin-top: 2rem;
+    background-color: #00796B; /* Fondo general */
+    border-radius: 6px;
+    padding: 0.8rem;
+}
+
+/* Título con línea más larga */
+.comparacion h2 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: block; 
+    border-bottom: 2px solid #40a0ad; /* Línea turquesa clara */
+    width: 95%; /* Más larga, pero con margen */
+    margin: 0 auto 0.8rem auto; /* Centrada */
+    padding-bottom: 0.3rem;
+}
+
+/* Caja contenedora */
+.container-articulos {
+    background-color: #00796B; 
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+/* Cada fila */
+.container-articulos .articulo {
+    background-color: #009688; 
+    color: #fff;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+}
+
+/* Texto del título dentro de cada fila */
+.comparacion .articulo h3 {
+    color: #fff;
+    margin: 0;
+}
+
+/* Porcentajes en óvalos con color más claro */
+.container-articulos .articulo p {
+    background-color: #40a0ad; /* Color más claro para el óvalo */
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px; /* Forma ovalada */
+    font-weight: 700;
+    min-width: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* ================================
+   Pie de página // Ocupa todo el ancho de la pantalla
+   ================================ */
+.copyright {
+    margin-left: 200px;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-menu);
+    color: #fff;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ================================
+   Responsive // El contenido ocupa todo el ancho. Se le ocurrió a chat 
+   ================================ */
+@media (max-width: 768px) {
+    .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hero, .copyright {
+        margin-left: 0;
+    }
+>>>>>>> Stashed changes
 }
